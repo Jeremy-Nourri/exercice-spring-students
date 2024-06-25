@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/template.css}" rel="stylesheet">
+</head>
+<body>
+
+<th:block th:fragment="nav">
+<nav>
+    <ul>
+        <li>
+            <a href="/">Accueil</a>
+        <li>
+            <a href="/list">Liste des étudiants</a>
+        </li>
+        <li>
+            <a href="/registration">Inscription</a>
+        </li>
+    </ul>
+</nav>
+</th:block>
+
+</body>
+</html>

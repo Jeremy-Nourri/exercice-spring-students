@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page étudiant</title>
+    <link th:href="@{/template.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav th:replace="~{nav :: nav}"></nav>
+</header>
+<main>
+    <h1>Page étudiant</h1>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td th:text="${student.firstName}"></td>
+            <td th:text="${student.lastName}"></td>
+            <td th:text="${student.age}"></td>
+            <td th:text="${student.email}"></td>
+        </tr>
+    </table>
+
+
+</main>
+
+
+</body>
+</html>

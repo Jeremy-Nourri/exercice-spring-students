@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des étudiants</title>
+    <link th:href="@{/template.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav th:replace="~{nav :: nav}"></nav>
+</header>
+<main>
+    <h1>Liste des étudiants</h1>
+    <p th:if="${students.isEmpty()}">Aucun étudiant inscrit</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.lastName}"></td>
+            <td th:text="${student.firstName}"></td>
+            <td>
+                <a th:href="@{/student/{lastname}/{firstname}(lastname=${student.lastName}, firstname=${student.firstName})}">Voir</a>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</main>
+
+</body>
+</html>
